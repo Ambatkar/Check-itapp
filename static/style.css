@@ -1,0 +1,109 @@
+*{
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* BASIC LAYOUT*/
+body{
+    background-color:#333;
+}
+.container{
+    width:33%;
+    height: 80vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    box-shadow:5px 5px 10px #000;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.f-row{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+/*------------------------------------------Form and Button Properties */
+.title{
+    text-align: center;
+    font-size: 32px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 5px 0;
+    color: rgb(52, 24, 128);
+    border-bottom: solid 1px;
+}
+.input-bar{
+    padding: 5px;
+}
+input[type='text']{
+    width:100%;
+    padding: 10px 2px;
+}
+input[type='text']:focus{
+    border: 0;
+}
+
+.btn-bar{
+    display:grid;
+    width:100%;
+    grid-template-columns:50% 50%;
+}
+txt-area{
+    text-align:center;
+}
+
+.btn{
+    padding: 10px;
+    border: 1px solid rgb(212, 201, 241);;
+    margin: 5px;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.btn:hover{
+    background-color:aqua;
+    color:white;
+    border: 1px solid aqua;
+}
+
+.red:hover{
+    background-color:rgb(236, 77, 77);
+    color:white;
+    border: 1px solid rgb(236, 77, 77);
+}
+
+.input-option{
+    width:100%;
+    padding: 10px;
+}
+
+
+/*------------------------------------------List Properties         */
+.list-item {
+    display:grid;
+    grid-template-columns: 5% auto 25%;
+    align-items: center;
+}
+
+.list-item span{
+    text-align:center;
+    color: white;
+    background-color: rgb(42, 42, 42);
+    margin:5px;
+    padding: 5px 10px;
+    border-radius: 8px;    
+}
+
+.list-detail{
+    display:flex;
+    flex-direction:column;
+    align-items: flex-start;
+}
+.list-detail div{
+    font-size: 11px;
+    margin:0 px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>TODO LIST</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- FA FONTS LIBRARY FOR ICONS-->
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="title">TODO</div>
+            <form action="/" method="POST">
+            <div class="input-bar">
+                Description<br>
+                <input type="text" placeholder="Description" name="todoDescription">
+            </div>
+            <div class="f-row">
+                <div class="input-bar">
+                    Category<br>
+                    <select name="selectCategory" class="input-option" name="todoCategory">
+                        <option value='None'>Select Option</option>
+                        <option value='Personal'>Personal</option>
+                        <option value='Work'>Work</option>
+                        <option value='School'>School</option>
+                        <option value='Goals'>Goals</option>
+                    </select>
+                   
+                </div>
+                <div class="input-bar">
+                    Due Date<br>
+                    <input type="date"  name="todoDate" placeholder="dd-mm-yyyy" value=""
+                    min="2021-01-01">
+                    
+                </div>
+            </div>
+            <div class="btn-bar">
+                    
+                <button class="btn" type="submit" value="Insert" name="submit">
+                    <i class="fas fa-plus-square"></i>
+                    &nbsp; Add Task</button>
+                <button class="btn red" type="submit" value="Delete" name="submit" >
+                    <i class="fas fa-minus-circle"></i>
+                    &nbsp; Delete Tasks
+                </button>
+            </div>                 
+            
+                
+                <% for(let i of todolist) { %> 
+                    <div class="list-item btn">
+                        <input type="checkbox" name="checklist" value="<%= i._id %>">
+                        <div class="list-detail">
+                        <%= i.description %>
+                        <div><i class="fa fa-calendar" aria-hidden="true"></i> 
+                            &nbsp; <%= i.dueDate %></div>
+                        </div>
+                        <span><%= i.category %></span>
+                    </div>
+                <% } %>
+            </div> 
+        </form>
+        </div>       
+        <script src="" async defer></script>
+    </body>
+</html>
